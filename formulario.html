@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de información</title>
+    <style>
+        h1 {font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color:brown;}
+        body {background-color: antiquewhite;}
+    </style>
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="formulario.php" method="post">
+        <fieldset>
+        <legend>Sus Datos</legend>
+        <p>
+        <label for="nombre y apellidos">Nombre y apellidos:</label>
+        <input type="text" id="nom-ape" name="nom-ape" maxlength="50"><br>
+        </p>
+        <p>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña"><br>
+        </p>
+        <p>
+        <label for="usuario">Usuario:</label>
+        <input disabled value="anónimo" type="text" name="usuario" id="usuario"><br>
+        </p>
+        <p>
+        <input type="radio" name="nivel" id="profesional">
+        <label for="profesional">Profesional</label>
+        </p>
+        <p>
+        <input checked type="radio" name="nivel" id="avanzado">
+        <label for="avanzado">Avanzado</label>
+        </p>
+        <p>
+        <input type="radio" name="nivel" id="principiante">
+        <label for="principiante">Principiante</label>
+        </p>
+        </fieldset>
+        <p>
+        <label for="nacionalidad">Nacionalidad</label>
+        <select name="nacio" id="nacionalidad">
+            <option value="esp">España</option>
+            <option value="fr">Francia</option>
+            <option value="it">Italia</option>
+            <option value="po">Portugal</option>
+        </select>
+        </p>
+        <p>
+        <label for="descripción">Descripción</label>
+        <textarea name="descripcion" id="descripcion" cols="25" rows="5"></textarea>
+        </p>
+        <p>
+        <input checked type="checkbox" name="recibir-info">
+        <label for="recibir-info">Deseo recibir información sobre novedades y ofertas</label>
+        </p>
+        <p>
+        <input type="checkbox" name="declaro-leido">
+        <label for="declaro-leido">Declaro haber leído y aceptar las condiciones</label>
+        </p>
+        <p>
+        Adjuntar foto:
+        <input type="file" name="adjuntar foto">
+        </p>
+        <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar formulario">
+        </p>
+    </form>
+</body>
+</html>
